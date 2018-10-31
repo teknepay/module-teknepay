@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+            <teknepay_creditcard>
+                <model>Teknepay\Teknepay\Model\Method\CreditCard</model>
+                <active>0</active>
+                <title>Teknepay CreditCard</title>
+                <profile_id />
+                <gateway_url />
+                <gateway_username />
+                <gateway_password />
+                <order_status>processing</order_status>
+                <enable_invoice>0</enable_invoice>
+                <card>1</card>
+                <min_order_total>1.00</min_order_total>
+                <enable_logging>0</enable_logging>
+                <allowspecific>0</allowspecific>
+                <cc_types>VI,MC</cc_types>
+                <allow_specific_currency>0</allow_specific_currency>
+                <group>teknepay</group>
+            </teknepay_creditcard>
+            <teknepay_check21>
+                <model>Teknepay\Teknepay\Model\Method\Check21</model>
+                <active>0</active>
+                <title>Teknepay Check21</title>
+                <profile_id />
+                <gateway_url />
+                <gateway_username />
+                <gateway_password />
+                <order_status>processing</order_status>
+                <enable_invoice>0</enable_invoice>
+                <card>1</card>
+                <min_order_total>1.00</min_order_total>
+                <enable_logging>0</enable_logging>
+                <allowspecific>0</allowspecific>
+                <allow_specific_currency>0</allow_specific_currency>
+                <group>teknepay</group>
+            </teknepay_check21>
+            <teknepay_eft>
+                <model>Teknepay\Teknepay\Model\Method\Eft</model>
+                <active>0</active>
+                <title>Teknepay EFT</title>
+                <profile_id />
+                <gateway_url />
+                <gateway_username />
+                <gateway_password />
+                <order_status>processing</order_status>
+                <enable_invoice>0</enable_invoice>
+                <card>1</card>
+                <min_order_total>1.00</min_order_total>
+                <enable_logging>0</enable_logging>
+                <allowspecific>0</allowspecific>
+                <allow_specific_currency>0</allow_specific_currency>
+                <group>teknepay</group>
+            </teknepay_eft>
+		</payment>
+	</default>
+</config>

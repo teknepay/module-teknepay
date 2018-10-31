@@ -1,0 +1,67 @@
+<fieldset data-bind="attr: {class: 'fieldset payment items ccard ' + getCode(), id: 'payment_form_' + getCode()}">
+    <legend>
+        <span><!-- ko i18n: 'Account Information'--><!-- /ko --></span>
+    </legend>
+
+    <div class="field number required">
+        <label data-bind="attr: {for: getCode() + '_routing_number'}" class="label">
+            <span><!-- ko i18n: 'Routing Number'--><!-- /ko --></span>
+        </label>
+        <div>
+            <input type="number" name="payment[routing_number]" class="input-text validate-length maximum-length-9 minimum-length-9" value=""
+                   data-bind="attr: {
+                                    autocomplete: off,
+                                    id: getCode() + '_routing_number',
+                                    title: $t('Routing Number'),
+                                    'data-container': getCode() + '-routing-number',
+                                    'data-validate': JSON.stringify({'required-number':true, 'validate-length':true})},
+                              enable: isActive($parents),
+                              value: routingNumber,
+                              valueUpdate: 'keyup' "/>
+        </div>
+    </div>
+    
+    <div class="field number required">
+        <label data-bind="attr: {for: getCode() + '_account_number'}" class="label">
+            <span><!-- ko i18n: 'Account Number'--><!-- /ko --></span>
+        </label>
+        <div class="control">
+            <input type="number" name="payment[account_number]" class="input-text validate-length maximum-length-20" value=""
+                   data-bind="attr: {
+                                    autocomplete: off,
+                                    id: getCode() + '_account_number',
+                                    title: $t('Account Number'),
+                                    'data-container': getCode() + '-account-number',
+                                    'data-validate': JSON.stringify({'required-number':true, 'validate-length':true})},
+                              enable: isActive($parents),
+                              value: accountNumber,
+                              valueUpdate: 'keyup' "/>
+        </div>
+    </div>
+
+    <div class="field required" data-bind="attr: {id: getCode() + '_account_type'}">
+        <label data-bind="attr: {for: getCode() + '_account_type'}" class="label">
+            <span><!-- ko i18n: 'Account Type'--><!-- /ko --></span>
+        </label>
+        <div class="control">
+            <div class="fields group group-2">
+                <div class="field no-label">
+                    <div class="control">
+                        <select name="payment[account_type]"
+                                 class="select"
+                                 style="min-width: 100px;"
+                                 data-bind="attr: {id: getCode() + '_account_type', 'data-container': getCode() + '-account-type', 'data-validate': JSON.stringify({required:true})},
+                                            enable: isActive($parents),
+                                            options: getAccountTypesValues(),
+                                            optionsValue: 'value',
+                                            optionsText: 'type',
+                                            optionsCaption: $t('Select'),
+                                            value: accountType">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</fieldset>

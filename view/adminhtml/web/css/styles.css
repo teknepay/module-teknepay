@@ -1,0 +1,167 @@
+.mm-comment-teknepay {
+    padding: 10px 0px;
+    font-size: 12px;
+}
+
+.teknepay-success {
+    display: block;
+    line-height: 30px;
+}
+
+.teknepay-success:before {
+    font-family: 'Admin Icons';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+    color: #79A22E;
+    content: '\e62d';
+}
+
+.teknepay-success .enabled-methods-error {
+    display: block;
+    line-height: 30px;
+}
+
+.teknepay-success .enabled-methods-error:before {
+    font-family: 'Admin Icons';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+    color: #EB5103;
+    content: '\e610';
+}
+
+.teknepay-success .enabled-methods {
+    display: block;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+.teknepay-success .enabled-methods:before {
+    font-family: 'Admin Icons';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 11px;
+    color: #78A230;
+    content: '\e610';
+}
+
+.teknepay-error {
+    display: block;
+    background-color: white;
+    line-height: 30px;
+}
+
+.teknepay-error:before {
+    color: #EB5202;
+    content: '\e623';
+    font-family: 'Admin Icons';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.mm-heading-teknepay {
+    color: #666;
+    text-align: left;
+    border: 1px solid rgba(229, 229, 229, 0.27);
+    border-left: 2px solid #EA4C00;
+    font-size: 14px;
+    margin: 20px 0 0;
+    padding: 5px 5px 5px 10px;
+    background: #F8F8F8;
+}
+
+.mm-block-teknepay {
+    background: #F8F8F8 no-repeat 8px;
+    border: 1px solid #E5E5E5;
+    border-left: 2px solid #EA4C00;
+    font-size: 12px;
+    color: #303030;
+    margin-bottom: 0;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    background-size: 55px;
+}
+
+.mm-block-teknepay table {
+    width: 520px !important;
+}
+
+.mm-block-teknepay strong {
+    font-weight: 600;
+    color: #514943;
+}
+
+.mm-block-teknepay p {
+    font-size: 12px;
+    padding: 0 0 0.3em;
+}
+
+.mm-block-teknepay tr a {
+    color: #6D6761;
+    margin-top: 3px;
+    display: block;
+}
+
+.mm-block-teknepay tr td {
+    padding: 5px 0px 0 0 !important;
+}
+
+.mm-block-teknepay .accordion .form-inline .config td {
+    padding: 0.8rem 1.5rem 0 0;
+}
+
+.mm-block-teknepay .helpbutton {
+    padding: 10px 15px;
+    width: 100px;
+    height: 51px;
+    float: right;
+    background: url(../images/icons.png) no-repeat scroll 0px -165px #F8F8F8;
+}
+
+.mm-block-teknepay .icon1 {
+    background: url(../images/icons.png) no-repeat scroll -20px -14px;
+    width: 45px;
+    height: 25px;
+    float: left;
+}
+
+.mm-block-teknepay .icon2 {
+    background: url(../images/icons.png) no-repeat scroll -30px -70px;
+    width: 36px;
+    height: 25px;
+    float: left;
+}
+
+.mm-block-teknepay .icon3 {
+    background: url(../images/icons.png) no-repeat scroll -20px -129px;
+    width: 47px;
+    height: 25px;
+    float: left;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .mm-block-teknepay .icon1 {
+        background: url(../images/icons@x2.png) no-repeat scroll 0px -7px;
+        background-size: 55px;
+    }
+
+    .mm-block-teknepay .icon2 {
+        background: url(../images/icons@x2.png) no-repeat scroll -4px -32px;
+        background-size: 45px;
+    }
+
+    .mm-block-teknepay .icon3 {
+        background: url(../images/icons@x2.png) no-repeat scroll 0px -75px;
+        background-size: 52px;
+    }
+
+    .mm-block-teknepay .helpbutton {
+        background: url(../images/icons@x2.png) no-repeat scroll 0px -260px #F8F8F8;
+        background-size: 130px;
+    }
+}

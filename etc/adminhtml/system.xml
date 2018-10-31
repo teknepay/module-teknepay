@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<system>
+        <section id="payment">
+            <group id="Teknepay_Teknepay_init" translate="label" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                <frontend_model>Teknepay\Teknepay\Block\Adminhtml\System\Config\Fieldset\Init</frontend_model>
+            </group>
+            <group id="Teknepay_Teknepay" translate="label comment" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label><![CDATA[Teknepay Gateway &nbsp;&nbsp; <i>Accept and process Credit Card, Check21 or EFT payments through Teknepay Gateway.</i>]]></label>
+                <fieldset_css>complex</fieldset_css>
+                <group id="branding" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Branding</label>
+                    <frontend_model>Teknepay\Teknepay\Block\Adminhtml\Render\Header</frontend_model>
+                </group>
+                <include path="Teknepay_Teknepay::system/method_creditcard.xml"/>
+                <include path="Teknepay_Teknepay::system/method_check21.xml"/>
+                <include path="Teknepay_Teknepay::system/method_eft.xml"/>
+            </group>
+        </section>
+
+        <tab id="teknepay" sortOrder="0" translate="label">
+			<label>teknepay</label>
+		</tab>
+
+		<section id="payment_gateway" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+			<label>Payment Gateway</label>
+			<tab>teknepay</tab>
+			<resource>Teknepay_Teknepay::config_teknepay_teknepay</resource>
+			<group id="options" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Options</label>
+                
+                <group id="branding" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Branding</label>
+                    <frontend_model>Teknepay\Teknepay\Block\Adminhtml\Render\Header</frontend_model>
+                </group>
+
+				<field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Version</label>
+                    <frontend_model>Teknepay\Teknepay\Block\Adminhtml\System\Config\Fieldset\Version</frontend_model>
+                </field>
+                <field id="link" translate="label" type="label" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Configuration</label>
+                    <frontend_model>Teknepay\Teknepay\Block\Adminhtml\System\Config\Form\Link</frontend_model>
+                </field>
+			</group>
+		</section>
+
+    </system>
+</config>
